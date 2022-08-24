@@ -51,18 +51,26 @@
 ## Component
 
 ### page
-- Main
-- Search
-- Detail
+- Main -> Main_poster
+- Search -> Posts, Pagination
+- Detail -> Heart, Reserve
 - Like
 - ResFinished
 
-### component
-
+### components
+- Logo
+- Nav
+- Heart
+- Main_poster
+- Movie
+- Pagination
+- posts
+- Reserve
 
 <br>
 
 ## 핵심기술
+useContext, Router
 
 
 <br>
