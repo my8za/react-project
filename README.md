@@ -82,6 +82,34 @@ API에서 제공하는 포스터 이미지 화질저하로 모바일 사이즈�
 
 <br>
 
+## 개발내용
+
+### App.js
+Router / Context
+Router를 활용하여 페이지 전환,
+context 기능 사용하기 위하여 Router 가장 외부에 MovieProvider로 감싸준다.
+MovieContext.js : likeDate, setLikeDate를 value값으로 갖는 MovieProvider 정의, {props.children}을 이용하여 전달
+
+### Main.js
+메인 페이지에서 Main_poster 컴포넌트를 수입(import) 
+Main_poster : axios를 이용하여 네이버 api의 영화 검색 기능을 사용
+네이버 api 검색 기능 특성상 query(영화제목) 값이 필수로 들어가야하기 떄문에 임의로 어벤져스 값을 넣어
+ImageSlider 기능과 함께 포스터 화면 구현
+
+### Search
+useEffect 에 있는 getMovies 를 실행하여 영화정보를 가져와 state를 변경,관리 
+
+**onChange**
+onchange 이벤트를 사용하여 input창에 검색어를 입력하면 value(검색정보)를 state에 저장
+**handleSubmit**
+handleSubmit은 input에서 엔터를 입력시 정보가 전송되는 기본 이벤트로, 해당 이벤트가 발생시 getMovies 함수실행
+해당 이벤트의 고유기능으로 화면이 새로고침되는 것을 방지하기 위해 e.preventDefault() 사용
+
+### Pagination  ---> 확인 필요
+movies를 posts에 넣어 기존의 정보를 뿌려주던 movies.map을 posts에 넣어 페이지 네이션 구현
+
+<br>
+
 ## 핵심기술
 useContext, Router
 
