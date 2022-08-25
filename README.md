@@ -144,6 +144,6 @@ Context를 이용하여 likeData, setLikeData 불러오기 빈하트 클릭시 >
 useContext, Router
 
 
-<br>
+<br>        
 
 ## 문제해결
