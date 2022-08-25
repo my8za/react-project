@@ -180,3 +180,20 @@ Link를 이용하여 다른 페이지로 넘어가면 렌더링이 되어 정보
 context.js에서 만든 MovieProvider를 전체 Router를 다 감싸주어  
 MovieContext.js 에 정의 되어있는 likeData와 setLikeData를 {props.children}을 이용하여 전달하는 방식으로
 해결하였습니다.
+
+```
+<MovieProvider>
+      <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<Main />} />
+            <Route path="/search" element={<Search />} />
+            <Route path="/detail" element={<Detail />} />
+            <Route path="/like" element={<Like />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/resfinished" element={<ResFinished />} />
+
+        </Routes>
+      </BrowserRouter>
+      
+    </MovieProvider>
+```
