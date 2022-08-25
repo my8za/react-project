@@ -1,0 +1,25 @@
+.like-movie {
+  display: flex;
+  max-width: 100%;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+}
+.like-movie img {
+  width: 170px;
+  border-radius: 16px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.like-info {
+  margin-left: 1rem;
+}
+.like-title {
+  padding-bottom: .8rem;
+  line-height: 1.8rem;
+  font-weight: 700;
+}
+.like-year {
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: .3rem;
+}

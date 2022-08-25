@@ -1,0 +1,10 @@
+button.seat-btn {
+    background-color: skyblue;
+    color: black;
+  }
+  
+  button.seat-btn.selected {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+  }
