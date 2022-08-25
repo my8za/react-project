@@ -172,6 +172,20 @@ function Boxs() {
 구현하였습니다.
 
 ```
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+module.exports = function(app) {
+  app.use(
+    '/v1/',
+    createProxyMiddleware({
+      target: "https://openapi.naver.com",
+      changeOrigin: true,
+    })
+  );
+};
+```
+
+```
 <div className="movies">
     <Posts posts={currentPosts(movies)} loading={loading} />
     <Pagination
