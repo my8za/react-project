@@ -145,6 +145,25 @@ Context를 이용하여 likeData, setLikeData 불러오기 빈하트 클릭시 >
 
 예매화면의 버튼으로 구현한 좌석생성과 상태값 변경에 대한부분에서 받을수잇는 데이터가 없어 표현에대한 어려움이있었고 버튼의 value값을 직접지정하고 className을 이용해 상태변경을 구현
 
+```
+function Boxs() {
+    let boxArray = [];
+    for (let i = 1; i < 4; i++) {
+      for (let j = 1; j < 11; j++) {
+        if (j === 10) {
+          boxArray.push(<br />)
+        } else {
+          boxArray.push(<button value={`${i}-${j}`}
+            onClick={e => handleInput(e)}
+            className="seat-btn"
+          >
+            {i}-{j}
+          </button>)
+        }
+      }
+    }
+```
+
 - **권모**
 
 페이지네이션에서 기존의 영화 데이터를 페이지네이션 기능에 추가하면서 원하는 대로 출력이 되지 않아
