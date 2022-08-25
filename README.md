@@ -182,6 +182,24 @@ MovieContext.js 에 정의 되어있는 likeData와 setLikeData를 {props.childr
 해결하였습니다.
 
 ```
+import { useState, createContext } from 'react';
+
+export const MovieContext = createContext(null);
+
+function MovieProvider(props) {
+    const [ likeData , setLikeData ] = useState([]);
+ 
+    return (
+        <MovieContext.Provider value={{ likeData, setLikeData }}>
+            {props.children}
+        </MovieContext.Provider>
+    )
+}
+
+export default MovieProvider;
+```
+
+```
 <MovieProvider>
       <BrowserRouter>
         <Routes>
@@ -195,5 +213,5 @@ MovieContext.js 에 정의 되어있는 likeData와 setLikeData를 {props.childr
         </Routes>
       </BrowserRouter>
       
-    </MovieProvider>
+</MovieProvider>
 ```
