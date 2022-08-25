@@ -1,37 +1,44 @@
 ## 📽 React-project, 영화 서비스 만들기
 demo
 
+<br>
+
 ## 프로젝트 선정배경 -> 수정필요
 일상생활에서 쉬이 접할 수 있는 영화콘텐츠 API를 이용하면 화면구성이 용이하다 판단하여 영화서비스 개발으로 결정
 API에서 제공하는 포스터 이미지 화질저하로 모바일 사이즈로 고정하여 진행
+
+<br>
 
 ## 개발 목표
 네이버 오픈 API 소스를 활용하여 영화 서비스 구현
 영화 제목 검색을 통하여 쉽게 정보를 확인하며 즐겨찾기 및 예매등의 기능을 통해 고객들의 편의를 제공
 
+<br>
 
 ## 서비스 내용
 
 **초안**
 
-메인 : api를 활용하여 영화 포스터 랜덤 출력
-로그인 / 회원가입
-검색 및 결과 리스팅
-상세페이지
-정보출력
-예매 (결제기능 제외)
-wish기능
+- 메인 : api를 활용하여 영화 포스터 랜덤 출력
+- 로그인 / 회원가입
+- 검색 및 결과 리스팅
+- 상세페이지
+- 정보출력
+- 예매 (결제기능 제외)
+- wish기능
 
 
 **현재 작업 내용**
 
-메인 : 포스터 슬라이드 구현은 완료하였으나 네이버 API 특성상 랜덤 출력은 실패
-로그인 / 회원가입 ❌
-검색 및 결과 리스팅 + 페이지네이션 ⭕
-상세페이지
-정보출력 ⭕
-예매 + 예매정보 페이지 ⭕
-wish기능 + 위시리스트 페이지 ⭕
+- 메인 : 포스터 슬라이드 구현은 완료하였으나 네이버 API 특성상 랜덤 출력은 실패
+- 로그인 / 회원가입 ❌
+- 검색 및 결과 리스팅 + 페이지네이션 ⭕
+- 상세페이지
+- 정보출력 ⭕
+- 예매 + 예매정보 페이지 ⭕
+- wish기능 + 위시리스트 페이지 ⭕
+
+<br>
 
 ## 프로젝트 진행
 1. API 선정 : 네이버 오픈 API
@@ -41,28 +48,33 @@ wish기능 + 위시리스트 페이지 ⭕
 3. 팀원 모두 기능별로 파트 분배, 각자 구현하여 지정 일자에 코드리뷰와 소스정리 및 취합
 4. 프로젝트 완성 및 보고서 작성
 
+<br>
 
 ### 💻 Set-up
 -> 사용 라이브러리
 
+<br>
 
 ### Component
 **Page**
-Main -> Main_poster
-Search -> Posts, Pagination
-Detail -> Heart, Reserve
-Like
-ResFinished
+- Main -> Main_poster
+- Search -> Posts, Pagination
+- Detail -> Heart, Reserve
+- Like
+- ResFinished
 
 **components**
-Logo
-Nav
-Heart
-Main_poster
-Movie
-Pagination
-posts
-Reserve
+- Logo
+- Nav
+- Heart
+- Main_poster
+- Movie
+- Pagination
+- posts
+- Reserve
+
+
+<br>
 
 ## 개발내용
 ### App.js
@@ -77,8 +89,8 @@ useEffect 에 있는 getMovies 를 실행하여 영화정보를 가져와 state�
 **onChange onchange**
 이벤트를 사용하여 input창에 검색어를 입력하면 value(검색정보)를 state에 저장 handleSubmit handleSubmit은 input에서 엔터를 입력시 정보가 전송되는 기본 이벤트로, 해당 이벤트가 발생시 getMovies 함수실행 해당 이벤트의 고유기능으로 화면이 새로고침되는 것을 방지하기 위해 e.preventDefault() 사용
 
-### Pagination ---> 확인 필요
-movies를 posts에 넣어 기존의 정보를 뿌려주던 movies.map을 posts에 넣어 페이지네이션 구현
+### Pagination
+기존의 정보를 뿌려주던 movies.map을 posts에 넣어 페이지네이션 구현
 
 ### Movie (상세페이지)
 Movie.js의 영화 포스터 또는 타이틀을 클릭하면 라우팅 된 Detail.js페이지로 <Link to={} state{}/>형식으로 주소값과 state값을 전달하며 Deatil.js 페이지로 화면전환 후 useLocation()함수를 이용하여 전달 받은 state값 출력
@@ -107,8 +119,13 @@ Context를 이용하여 likeData, setLikeData 불러오기 빈하트 클릭시 >
 하트 기능을 활용하여 likeData에 배열로 들어간 데이터를 읽어 화면에 출력
 
 
+<br>
+
+
 ## 핵심기술
 useContext, Router
 
+
+<br>
 
 ## 문제해결
