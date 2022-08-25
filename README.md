@@ -171,6 +171,47 @@ function Boxs() {
 검색 하면 그값을 다시 형식에 맞게 정렬시켜 화면에 뿌려주는 부분을 합쳐야 한다는것을 알게 되고
 구현하였습니다.
 
+```
+<div className="movies">
+    <Posts posts={currentPosts(movies)} loading={loading} />
+    <Pagination
+      postsPerPage={postsPerPage}
+      totalPosts={movies.length}
+      paginate={setCurrentPage}
+    ></Pagination>
+</div>
+```
+
+```
+const Posts = ({ posts, loading }) => {
+  return (
+    <>
+      {loading && <div> loading... </div>}
+      <ul>
+        {posts.map((post) => (
+          <div>
+            <Movie
+              key={post.id}
+              id={post.link}
+              title={post.title}
+              poster={post.image}
+              actors={post.actor}
+              year={post.pubDate}
+              userRating={post.userRating}
+            />
+          </div>
+
+        ))}
+      </ul>
+    </>
+  );
+};
+```
+검색 부분의 오류는 
+검색기능을 구현하면서 오류 사항은 CORS 애러가 발생을 하였습니다.
+저는 이것을 해결 하기 위해 proxy 를 사용 하였습니다. 
+단 이것의 단점은 개발 환경에서만 적용이 되고 여러개를 호출할수없고 1개만 가능합니다.
+
 
 - **경률 / 혜지**
 
