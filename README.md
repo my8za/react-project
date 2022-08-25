@@ -155,8 +155,10 @@ Context를 이용하여 likeData, setLikeData 불러오기 빈하트 클릭시 >
 
 - **경률 / 혜지**
 
+App.js
 처음에 Context.js파일 만들어서 createContext를 통하여 Context를 생성하고
-context의 데이터를 필요로하는 라우터만 감쌌었는데 routes안에는 route형식으로 들어가야해서
+context의 데이터를 필요로하는 라우터만 감쌌었는데 하트버튼을 누른 영화 항목을 지속해서 보여주어야하는데
+Link를 이용하여 다른 페이지로 넘어가면 렌더링이 되어 정보가 날아가는 문제가 발생하여
 context.js에서 만든 MovieProvider를 전체 Router를 다 감싸주어  
 MovieContext.js 에 정의 되어있는 likeData와 setLikeData를 {props.children}을 이용하여 전달하는 방식으로
 해결하였습니다.
