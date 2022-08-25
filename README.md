@@ -135,13 +135,6 @@ Context를 이용하여 likeData, setLikeData 불러오기 빈하트 클릭시 >
 하트 기능을 활용하여 likeData에 배열로 들어간 데이터를 읽어 화면에 출력
 
 
-<br>
-
-
-## 핵심기술
-useContext, Router
-
-
 <br>        
 
 ## 문제해결
