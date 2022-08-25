@@ -155,7 +155,6 @@ Context를 이용하여 likeData, setLikeData 불러오기 빈하트 클릭시 >
 
 - **경률 / 혜지**
 
-App.js
 처음에 Context.js파일 만들어서 createContext를 통하여 Context를 생성하고
 context의 데이터를 필요로하는 라우터만 감쌌었는데 하트버튼을 누른 영화 항목을 지속해서 보여주어야하는데
 Link를 이용하여 다른 페이지로 넘어가면 렌더링이 되어 정보가 날아가는 문제가 발생하여
