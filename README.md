@@ -139,7 +139,7 @@ Context를 이용하여 likeData, setLikeData 불러오기 빈하트 클릭시 >
 
 <br>        
 
-## 문제해결
+## 🛠 문제해결
 
 **동석**
 
