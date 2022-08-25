@@ -74,22 +74,22 @@ styled-components
 <br>
 
 ### Component
-**Page**
-- Main -> Main_poster
-- Search -> Posts, Pagination
-- Detail -> Heart, Reserve
-- Like
-- ResFinished
+- **Page**
+  - Main -> Main_poster
+  - Search -> Posts, Pagination
+  - Detail -> Heart, Reserve
+  - Like
+  - ResFinished
 
-**components**
-- Logo
-- Nav
-- Heart
-- Main_poster
-- Movie
-- Pagination
-- posts
-- Reserve
+- **components**
+  - Logo
+  - Nav
+  - Heart
+  - Main_poster
+  - Movie
+  - Pagination
+  - posts
+  - Reserve
 
 
 <br>
